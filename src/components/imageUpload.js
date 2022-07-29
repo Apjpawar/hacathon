@@ -15,8 +15,12 @@ const ImageUpload = () => {
     }
 
     const submit = () => {
-
-        // axios.post
+         const fd = new FormData();
+         fd.append('image', selectedImage, selectedImage.name);
+         axios.post('#',fd)
+            .then( res => {
+                console.log(res);
+            });
         console.log(selectedImage);
     }
 
